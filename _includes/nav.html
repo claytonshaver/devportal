@@ -1,3 +1,6 @@
+<!-- Script pointing to jekyll-search.js -->
+<script src="{{ site.baseurl }}/bower_components/simple-jekyll-search/dest/jekyll-search.js" type="text/javascript"></script>
+
 <!-- Main Nav -->
 <nav class="nav navbar navbar-light navbar-fixed-top">
   <div id="search-bar-wrapper" class="search-bar-wrapper">
@@ -37,7 +40,7 @@
           <a href="/">PORTAL HOME</a>
         </li>
 
-        {% if page.url == '/docs/overview/overview.html' %}
+        {% if page.url contains '/docs/overview' %}
           <li class="active">
         {% else %}
           <li>
@@ -47,7 +50,17 @@
           </a>
         </li>
 
-        {% if page.url == '/docs/elements.html' %}
+        {% if page.url contains '/docs/tutorial' %}
+          <li class="active">
+        {% else %}
+          <li>
+        {% endif %}
+          <a href="/docs/tutorial/overview.html">
+            TUTORIALS
+          </a>
+        </li>
+
+        {% if page.url contains '/docs/elements' %}
           <li class="active">
         {% else %}
           <li>
@@ -57,7 +70,7 @@
           </a>
         </li>
 
-        {% if page.url == '/docs/guides/home.html' %}
+       <!--  {% if page.url == '/docs/guides/home.html' %}
           <li class="active">
         {% else %}
           <li>
@@ -65,9 +78,9 @@
           <a href="/docs/guides/home.html">
             INTEGRATION GUIDES
           </a>
-        </li>
+        </li> -->
 
-        {% if page.url == '/docs/hubs/hub-docs.html' %}
+        <!-- {% if page.url == '/docs/hubs/hub-docs.html' %}
           <li class="active">
         {% else %}
           <li>
@@ -75,7 +88,7 @@
           <a href="/docs/hubs/hub-docs.html">
             HUB API DOCS
           </a>
-        </li>
+        </li> -->
 
         <li>
           <a href="https://console.cloud-elements.com/elements/jsp/signup.jsp" target="_blank">
